@@ -548,6 +548,11 @@ ${SED_INLINE} "s/\$version/$FFMPEG_VERSION/g" "${BASEDIR}"/src/"${LIB_NAME}"/ffb
   --disable-nvenc \
   --disable-vaapi \
   --disable-vdpau \
+  --disable-everything \
+  --enable-filter=drawtext \
+  --enable-libfreetype \
+  --enable-libfontconfig \
+  --enable-libfribidi \
   ${CONFIGURE_POSTFIX} 1>>"${BASEDIR}"/build.log 2>&1
 
 if [[ $? -ne 0 ]]; then
